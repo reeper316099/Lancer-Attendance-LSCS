@@ -60,6 +60,7 @@ The web server and scanner are separated:
 ├── setup.sh                  # Raspberry Pi setup helper script
 ├── templates/                # HTML templates
 ├── static/                   # Frontend assets (CSS, JS, images)
+├── requirements.txt          # Python dependencies
 └── README.md
 ```
 
@@ -81,15 +82,10 @@ The web server and scanner are separated:
 
 2. Install dependencies:
    ```bash
-   pip install flask flask-socketio werkzeug
+   pip install -r requirements.txt
    ```
 
-3. (Optional, hardware) install PN532 packages:
-   ```bash
-   pip install adafruit-circuitpython-pn532
-   ```
-
-4. Initialize the database:
+3. Initialize the database:
    ```bash
    python3 models.py
    ```
